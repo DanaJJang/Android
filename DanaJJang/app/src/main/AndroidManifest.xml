@@ -11,8 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Danajjang">
-        <activity android:name=".signinActivity"/>
-        <activity android:name=".wordpadActivity" />
+        <activity android:name=".SigninActivity"/>
         <activity android:name=".ListActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
