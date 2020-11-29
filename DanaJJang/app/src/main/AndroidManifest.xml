@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Danajjang"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.AddWordActivity"/>
+        <activity android:name=".activity.TestActivity"></activity>
+        <activity android:name=".activity.SignWordActivity" />
+        <activity android:name=".activity.AddWordActivity" />
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.SignInActivity" />
         <activity android:name=".activity.AddWordPadActivity" />
@@ -22,11 +24,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".activity.ListActivity">
-
-        </activity>
+        <activity android:name=".activity.ListActivity" />
     </application>
 
 </manifest>
