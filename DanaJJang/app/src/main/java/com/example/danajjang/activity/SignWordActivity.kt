@@ -1,4 +1,4 @@
-package com.example.danajjang.activity
+package com.example.danajjang.recycerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -10,8 +10,6 @@ class SignWordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signword)
 
-        //plusword.setOnClickListner{
-            // 여기에 클릭시에 리사이클러뷰 추가하는 거 구현
-        //}
+       val Dictionary=arrayListof<Dictionary>()
     }
 }
