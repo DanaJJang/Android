@@ -10,10 +10,10 @@ import com.example.danajjang.R
 import kotlinx.android.synthetic.main.activity_signup.view.*
 import kotlinx.android.synthetic.main.item_list.view.*
 
-class Adapter(val AdapterList:ArrayList<Dictionary>):RecyclerView.Adapter<Adapter.CustomViewHolder>(){
+class Adapter(val adapterList:ArrayList<Dictionary>):RecyclerView.Adapter<Adapter.CustomViewHolder>(){
 
     fun add(item : Dictionary){
-        AdapterList.add(item)
+        adapterList.add(item)
         notifyDataSetChanged()
 
     }
@@ -29,12 +29,12 @@ class Adapter(val AdapterList:ArrayList<Dictionary>):RecyclerView.Adapter<Adapte
 
 
     override fun getItemCount(): Int {
-        return AdapterList.size
+        return adapterList.size
     }
 
     override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
-        holder.meaning.text = AdapterList.get(position).meaning
-        holder.word.text = AdapterList.get(position).word
+        holder.meaning.text = adapterList.get(position).meaning
+        holder.word.text = adapterList.get(position).word
 
     }
 

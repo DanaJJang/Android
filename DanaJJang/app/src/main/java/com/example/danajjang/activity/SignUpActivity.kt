@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import com.example.danajjang.Auth
 import com.example.danajjang.NetRetrofit
@@ -34,17 +35,15 @@ class SignUpActivity : AppCompatActivity() {
                             Toast.makeText(applicationContext,"가입이 완료되었습니다",Toast.LENGTH_SHORT).show()
 
 
-                            val intent= Intent(this@SignUpActivity, SignInActivity::class.java)
-                            startActivity(intent)
                         }
                     }
-
                     override fun onFailure(call: Call<Void>, t: Throwable) {
                         Log.e("sdfa",t.message.toString())
                     }
-
                 })
-            }else Toast.makeText(this,"비번 틀렸어요",Toast.LENGTH_SHORT).show()
+                val intent= Intent(this@SignUpActivity, SignInActivity::class.java)
+                startActivity(intent)
+            }else passworderror_tv.visibility = View.VISIBLE
 
         }
     }

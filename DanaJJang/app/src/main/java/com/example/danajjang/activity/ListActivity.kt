@@ -40,6 +40,8 @@ class ListActivity : AppCompatActivity() {
 
             testin_btn.setOnClickListener(){
                 val intent = Intent(this,SignWordActivity::class.java)
+                intent.putExtra("wordCount", num_tv.text.toString().toInt())
+
                 startActivity(intent)
             }
 

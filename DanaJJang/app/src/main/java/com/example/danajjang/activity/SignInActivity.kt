@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.example.danajjang.R
-import kotlinx.android.synthetic.main.activity_sign_in.*
+import kotlinx.android.synthetic.main.activity_signin.*
 
 class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         Log.d("asdfdsaf","signin")
-        setContentView(R.layout.activity_sign_in)
+        setContentView(R.layout.activity_signin)
 
         button.setOnClickListener(){
            val intent= Intent(applicationContext, AddWordPadActivity::class.java)
