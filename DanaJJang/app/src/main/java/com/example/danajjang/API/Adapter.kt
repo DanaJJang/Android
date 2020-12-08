@@ -1,14 +1,11 @@
-package com.example.danajjang.recycerview
+package com.example.danajjang.API
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.danajjang.R
-import kotlinx.android.synthetic.main.activity_signup.view.*
-import kotlinx.android.synthetic.main.item_list.view.*
 
 class Adapter(val adapterList:ArrayList<Dictionary>):RecyclerView.Adapter<Adapter.CustomViewHolder>(){
 
@@ -26,7 +23,11 @@ class Adapter(val adapterList:ArrayList<Dictionary>):RecyclerView.Adapter<Adapte
 
         }
 
+    public fun setDictionary(word : String, meaning : String){
 
+        //adapterList[]
+
+    }
 
     override fun getItemCount(): Int {
         return adapterList.size

@@ -1,4 +1,4 @@
-package com.example.danajjang
+package com.example.danajjang.API
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -12,11 +12,6 @@
         tools:layout="@layout/activity_main" />
 
     <activity
-        android:id="@+id/testPageActivity"
-        android:name="com.example.danajjang.activity.TestPageActivity"
-        android:label="activity_test_page"
-        tools:layout="@layout/activity_test_page" />
-    <activity
         android:id="@+id/addWordPadActivity"
         android:name="com.example.danajjang.activity.AddWordPadActivity"
         android:label="activity_addwordpad"
@@ -31,4 +26,32 @@
         android:name="com.example.danajjang.activity.ListActivity"
         android:label="activity_list"
         tools:layout="@layout/activity_list" />
+    <activity
+        android:id="@+id/signWordActivity"
+        android:name="com.example.danajjang.activity.SignWordActivity"
+        android:label="activity_signword"
+        tools:layout="@layout/activity_signword" />
+    <activity
+        android:id="@+id/englishTestActivity"
+        android:name="com.example.danajjang.activity.EnglishTestActivity"
+        android:label="activity_english_test"
+        tools:layout="@layout/activity_english_test" />
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/meaningTestActivity">
+        <activity
+            android:id="@+id/meaningTestActivity"
+            android:name="com.example.danajjang.activity.MeaningTestActivity"
+            android:label="activity_meaningtest"
+            tools:layout="@layout/activity_meaningtest" />
+    </navigation>
+    <activity
+        android:id="@+id/signInActivity"
+        android:name="com.example.danajjang.activity.SignInActivity"
+        android:label="activity_signin"
+        tools:layout="@layout/activity_signin" />
+    <activity
+        android:id="@+id/meaningTestActivity2"
+        android:name="com.example.danajjang.activity.MeaningTestActivity"
+        android:label="activity_meaningtest"
+        tools:layout="@layout/activity_meaningtest" />
 </navigation>

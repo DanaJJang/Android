@@ -1,6 +1,5 @@
-package com.example.danajjang
+package com.example.danajjang.API
 
-import com.example.danajjang.API.Token
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -12,4 +11,7 @@ interface Api{
 
     @POST("/auth")
     fun postSignIn(@Body auth: Auth) : Call<Token>
+
+    @POST("/word")
+    fun postSignWord(@Body word: Word) : Call<Void>
 }

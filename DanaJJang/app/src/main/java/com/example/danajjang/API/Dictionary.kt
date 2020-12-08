@@ -1,3 +1,3 @@
-package com.example.danajjang.recycerview
+package com.example.danajjang.API
 
 class Dictionary(var word:String,var meaning:String)

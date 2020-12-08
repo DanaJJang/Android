@@ -1,4 +1,9 @@
 package com.example.danajjang.API
 
-class Token {
-}
+data class Token (
+    var access_token : String,
+    var refresh_token : String,
+    var refresh_exp : String
+
+
+)
