@@ -21,6 +21,8 @@ class SignUpActivity : AppCompatActivity() {
 
         //이제 회원가입이 완료되면 워드 패드를 추가하는 프레그 먼트로 이동한다.
 
+        //공백일 경우에는 회원가입이 되지 않는 로직
+
         signup_btn.setOnClickListener(){
             val auth : Auth = Auth(signup_user_id.text.toString(), signup_user_pw.text.toString())
             Log.e("sdfa",auth.id)
@@ -31,7 +33,7 @@ class SignUpActivity : AppCompatActivity() {
             if(signup_user_pw.text.toString() == signup_user_pw_check.text.toString()){
                 response.enqueue(object: Callback<Void> {
                     override fun onResponse(call: Call<Void>, response: Response<Void>) {
-                        if(response.code() == 201 || response.code() == 200){
+                        if(response.code() == 201){
                             Toast.makeText(applicationContext,"가입이 완료되었습니다",Toast.LENGTH_SHORT).show()
 
 
