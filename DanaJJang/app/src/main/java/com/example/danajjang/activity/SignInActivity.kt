@@ -1,4 +1,4 @@
-package com.example.danajjang.activity
+      package com.example.danajjang.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -43,7 +43,7 @@ class SignInActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<Token>, response: Response<Token>) {
 
                     if (response.code() == 201) {
-                        Toast.makeText(applicationContext, "로그인에 성공했습니", Toast.LENGTH_SHORT)
+                        Toast.makeText(applicationContext, "로그인에 성공했습니다", Toast.LENGTH_SHORT)
                             .show()
 
                         val intent = Intent(applicationContext, AddWordPadActivity::class.java)

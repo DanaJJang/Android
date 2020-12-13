@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Danajjang"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.MeaningTestActivity"></activity>
+        <activity android:name=".activity.ChoiceActivity"></activity>
+        <activity android:name=".activity.MeaningTestActivity" />
         <activity android:name=".activity.EnglishTestActivity" />
         <activity android:name=".activity.TestActivity" />
         <activity android:name=".activity.SignWordActivity" />

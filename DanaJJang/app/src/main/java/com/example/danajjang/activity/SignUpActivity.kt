@@ -25,7 +25,7 @@ class SignUpActivity : AppCompatActivity() {
 
         signup_btn.setOnClickListener(){
             val auth : Auth = Auth(signup_user_id.text.toString(), signup_user_pw.text.toString())
-            Log.e("sdfa",auth.id)
+            Log.e("sdfa",auth.userId)
             Log.e("sdfa",auth.password)
 
             val response: Call<Void> = NetRetrofit().getService().postSignUp(auth)
@@ -35,8 +35,6 @@ class SignUpActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<Void>, response: Response<Void>) {
                         if(response.code() == 201){
                             Toast.makeText(applicationContext,"가입이 완료되었습니다",Toast.LENGTH_SHORT).show()
-
-
                         }
                         else if(response.code() == 400){
                             Toast.makeText(applicationContext,"가입이 실패하였습니다.",Toast.LENGTH_SHORT).show()

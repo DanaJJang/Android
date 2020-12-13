@@ -31,7 +31,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/meaning_tv"
+            android:id="@+id/Meaning_tv"
             android:layout_width="153dp"
             android:layout_height="62dp"
             android:layout_marginEnd="40dp"
