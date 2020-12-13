@@ -17,7 +17,7 @@ interface Api{
     @POST("/and/word")
     fun postSignWord(@Body word: Word) : Call<Void>
 
-   
+
 
 
 
