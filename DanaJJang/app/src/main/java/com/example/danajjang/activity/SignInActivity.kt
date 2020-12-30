@@ -9,6 +9,7 @@ import com.example.danajjang.API.Token
 import com.example.danajjang.API.Auth
 import com.example.danajjang.API.NetRetrofit
 import com.example.danajjang.R
+import kotlinx.android.synthetic.main.activity_addwordpad.*
 import kotlinx.android.synthetic.main.activity_signin.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -18,8 +19,10 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
-
+        button.setOnClickListener(){
+            val intent = Intent(this, addwordpad::class.java)
+            startActivity(intent)
+        }
         Log.d("asdfdsaf", "signin")
         setContentView(R.layout.activity_signin)
 
@@ -65,3 +68,5 @@ class SignInActivity : AppCompatActivity() {
 
         }
     }
+
+

@@ -33,7 +33,6 @@ class SignWordActivity : AppCompatActivity() {
         word_recyclerView.adapter = adapter
 
 
-
         Registration.setOnClickListener {
 
             val Word = adapter.adapterList
@@ -51,10 +50,9 @@ class SignWordActivity : AppCompatActivity() {
                             Toast.makeText(applicationContext, "존재하지 않은 폴더 입니다", Toast.LENGTH_SHORT)
                                 .show()
                         } else if (response.code() == 409) {
-                            Toast.makeText(applicationContext, "중복된 단어 입니", Toast.LENGTH_SHORT)
+                            Toast.makeText(applicationContext, "중복된 단어 입니다", Toast.LENGTH_SHORT)
                                 .show()
                         }
-
 
                     }
 

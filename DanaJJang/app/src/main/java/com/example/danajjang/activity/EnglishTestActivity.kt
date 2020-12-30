@@ -9,4 +9,5 @@ class EnglishTestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_english_test)
     }
+
 }
