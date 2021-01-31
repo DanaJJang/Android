@@ -65,4 +65,3 @@ class SignWordActivity : AppCompatActivity() {
     }
 }
 
-

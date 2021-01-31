@@ -50,7 +50,7 @@ class SignUpActivity : AppCompatActivity() {
                 })
                 val intent= Intent(this@SignUpActivity, SignInActivity::class.java)
                 startActivity(intent)
-            }else passworderror_tv.visibility = View.VISIBLE
+           }else passworderror_tv.visibility = View.VISIBLE
 
         }
     }

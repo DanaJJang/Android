@@ -1,4 +1,4 @@
-      package com.example.danajjang.activity
+package com.example.danajjang.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
