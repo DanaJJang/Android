@@ -1,9 +1,8 @@
 package com.example.danajjang.API
 
+import com.example.danajjang.RecyclerView.Word
 import retrofit2.Call
 import retrofit2.http.Body
-import retrofit2.http.DELETE
-import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface Api{

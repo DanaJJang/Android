@@ -19,7 +19,7 @@ class SignInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        button.setOnClickListener(){
+        Login_button.setOnClickListener(){
             val intent = Intent(this, addwordpad::class.java)
             startActivity(intent)
         }
@@ -33,7 +33,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
 
-        button.setOnClickListener() {
+        Login_button.setOnClickListener() {
             login(id.text.toString(), pw.text.toString())
 
         }

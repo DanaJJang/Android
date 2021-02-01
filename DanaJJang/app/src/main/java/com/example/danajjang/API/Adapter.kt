@@ -1,12 +1,12 @@
 package com.example.danajjang.API
 
-import android.content.ClipData
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.danajjang.R
+import com.example.danajjang.RecyclerView.Word
 
 class Adapter(val adapterList:ArrayList<Word>):RecyclerView.Adapter<Adapter.CustomViewHolder>(){
 
@@ -19,7 +19,7 @@ class Adapter(val adapterList:ArrayList<Word>):RecyclerView.Adapter<Adapter.Cust
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list_EN,parent,false)
         return CustomViewHolder(view)
 
         }
