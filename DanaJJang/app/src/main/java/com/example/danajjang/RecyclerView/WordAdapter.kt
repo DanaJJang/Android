@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.danajjang.R
 
@@ -26,13 +27,13 @@ class WordAdapter(val context: Context, val wordList : ArrayList<Word>):
 
     inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val English = itemView?.findViewById<EditText>(R.id.Eng_tv)
-        val Meaning = itemView?.findViewById<EditText>(R.id.Meaning_tv)
+        val English = itemView?.findViewById<TextView>(R.id.Eng_tv)
+        val Meaning = itemView?.findViewById<TextView>(R.id.Meaning_tv)
 
-        fun bind( word : Word, context: Context) {
-            
+       fun bind (word : Word, context : Context){
+
             English?.text = word.English
-            Meaning?.text =word.Meaning
+            Meaning?.text = word.Meaning
 
         }
     }
