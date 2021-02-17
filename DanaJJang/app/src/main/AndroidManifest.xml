@@ -25,7 +25,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.AddWordPadActivity" />
-        <activity android:name=".activity.SignUpActivity" />
         <activity android:name=".activity.ListActivity" />
     </application>
 
