@@ -4,67 +4,40 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
-import com.example.danajjang.API.Token
-import com.example.danajjang.API.Auth
-import com.example.danajjang.API.NetRetrofit
 import com.example.danajjang.R
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_addwordpad.*
 import kotlinx.android.synthetic.main.activity_signin.*
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 class SignInActivity : AppCompatActivity() {
+
+    companion object{
+        private const val RC_SIGN_IN = 120
+
+    private lateinit var mAuth : FirebaseAuth
+    private lateinit var googleInClient: GoogleSignInClient
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        Login_button.setOnClickListener(){
-            val intent = Intent(this, addwordpad::class.java)
-            startActivity(intent)
-        }
-        Log.d("asdfdsaf", "signin")
         setContentView(R.layout.activity_signin)
 
+        // Configure Google Sign In
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
 
-        signinword.setOnClickListener() {
-            val intent = Intent(applicationContext, SignUpActivity::class.java)
-            startActivity(intent)
-        }
+        googleSignInClient = GoogleSignIn.getClient(this, gso)
 
-
-        Login_button.setOnClickListener() {
-            login(id.text.toString(), pw.text.toString())
-
-        }
+        //Firebase Auth instance
+        mAuth = FirebaseAuth.getInstance()
     }
-
-        private fun login(id: String, password: String) {
-            val auth = Auth(id, password)
-            val response: Call<Token> = NetRetrofit().getService().postSignIn(auth)
-            response.enqueue(object : Callback<Token> {
-                override fun onResponse(call: Call<Token>, response: Response<Token>) {
-
-                    if (response.code() == 201) {
-                        Toast.makeText(applicationContext, "로그인에 성공했습니다", Toast.LENGTH_SHORT)
-                            .show()
-
-                        val intent = Intent(applicationContext, AddWordPadActivity::class.java)
-                        startActivity(intent)
-
-
-                    } else if (response.code() == 400) {
-                        Toast.makeText(applicationContext, "로그인 실패하였습니다", Toast.LENGTH_SHORT)
-                            .show()
-                    }
-
-                }
-
-                override fun onFailure(call: Call<Token>, t: Throwable) {
-                    TODO("Not yet implemented")
-                }
-
-            })
+    private fun signIn() {
+        val signInIntent = googleSignInClient.signInIntent
+        startActivityForResult(signInIntent, RC_SIGN_IN)
+    }
 
         }
     }
