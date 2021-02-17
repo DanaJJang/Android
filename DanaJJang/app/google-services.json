@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "182833175047",
+    "project_id": "danajjang-ea56b",
+    "storage_bucket": "danajjang-ea56b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182833175047:android:578bb51015a036aff4e8a2",
+        "android_client_info": {
+          "package_name": "com.example.danajjang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182833175047-g21uq398eqgslh8ilc6midg1n3hcaffa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.danajjang",
+            "certificate_hash": "e07978ae69d947ea0c57e9fe593b927313a82a2d"
+          }
+        },
+        {
+          "client_id": "182833175047-8306bl8f72ln6j9rk7s0tv3rf26m6941.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbyJDknYN2LYy-3B9iJTULFN0LXxNjJcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182833175047-8306bl8f72ln6j9rk7s0tv3rf26m6941.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
