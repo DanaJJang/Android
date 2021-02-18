@@ -24,10 +24,12 @@ class MainActivity : AppCompatActivity() {
             if(user != null) {
                 val dashboardIntent = Intent(this, DashboardActivity::class.java)
                 startActivity(dashboardIntent)
+                finish()
             }
             else {
                 val signInActivity = Intent(this,SignInActivity::class.java)
                 startActivity(signInActivity)
+                finish()
 
             }
         },2000)

@@ -16,8 +16,8 @@
         <activity android:name=".activity.MeaningTestActivity" />
         <activity android:name=".activity.EnglishTestActivity" />
         <activity android:name=".activity.SignWordActivity" />
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.SignInActivity">
+        <activity android:name=".activity.SignInActivity" />
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
