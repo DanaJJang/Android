@@ -9,6 +9,7 @@ import com.example.danajjang.R
 import com.google.firebase.auth.FirebaseAuth
 
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     private lateinit  var mAuth : FirebaseAuth
@@ -22,10 +23,12 @@ class MainActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             if(user != null) {
-                val dashboardIntent = Intent(this, DashboardActivity::class.java)
+                val dashboardIntent = Intent(this,DashboardActivity::class.java)
                 startActivity(dashboardIntent)
                 finish()
+
             }
+
             else {
                 val signInActivity = Intent(this,SignInActivity::class.java)
                 startActivity(signInActivity)

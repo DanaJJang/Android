@@ -43,6 +43,8 @@ class SignInActivity : AppCompatActivity() {
 
         Sign_in_btn.setOnClickListener() {
             signIn()
+            val intent = Intent(this, AddWordPadActivity::class.java)
+
         }
     }
 
